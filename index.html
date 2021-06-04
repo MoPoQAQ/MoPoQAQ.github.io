@@ -204,7 +204,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags  //标签"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags   //标签"></i> <br>
             
             标签
           </a>
@@ -234,9 +234,19 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user    //关于"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user   //关于"></i> <br>
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-cloud">
+          <a href="http://mopo-cloud.ddnsfree.com/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cloud  //网盘"></i> <br>
+            
+            cloud
           </a>
         </li>
       
@@ -244,7 +254,7 @@
         <li class="menu-item menu-item-links">
           <a href="/links/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-leaf  //友链"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-leaf   //友链"></i> <br>
             
             友链
           </a>
@@ -420,12 +430,18 @@
 
       
         
-          
-            
-          
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+<li>青龙Bot交互使用 <strong>SuMaiKaDe</strong> 大佬的开源项目 👉 <a href="https://github.com/SuMaiKaDe/jddockerbot/tree/master" target="_blank" rel="noopener">jddockerbot</a> , 感谢大佬的优质代码
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/05/14/qinglong-docker-config/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </li></ul></div>
     
     
     
@@ -580,31 +596,10 @@
 <li>Docker</li>
 <li>代理 (尽量满足)</li>
 </ul>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="Host方式"><a href="#Host方式" class="headerlink" title="Host方式"></a>Host方式</h3><p><code>docker run -dit \
-    --name QL \
-    --hostname QL \
-    --restart always \
-    -p 5700:5700 \
-    -v $PWD/QL/config:/ql/config \
-    -v $PWD/QL/log:/ql/log \
-    -v $PWD/QL/db:/ql/db \
-    -v $PWD/QL/scripts:/ql/scritps \
-    -v $PWD/QL/jbot:/ql/jbot \
-    whyour/qinglong:latest</code></p>
-<h3 id="MacVlan方式"><a href="#MacVlan方式" class="headerlink" title="MacVlan方式"></a>MacVlan方式</h3><p><code>docker run -dit \
-    --name QL \
-    --hostname QL \
-    --restart always \
-    --net=macnet \
-    --ip=192.168.2.20 \
-    --dns=192.168.2.2 \
-    --mac-address C2:F2:9C:C5:B1:01 \
-    -v $PWD/QL/config:/ql/config \
-    -v $PWD/QL/log:/ql/log \
-    -v $PWD/QL/db:/ql/db \
-    -v $PWD/QL/scripts:/ql/scritps \
-    -v $PWD/QL/jbot:/ql/jbot \
-    whyour/qinglong:latest</code></p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="Host方式"><a href="#Host方式" class="headerlink" title="Host方式"></a>Host方式</h3><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span> -dit \</span><br><span class="line">  --name QL \</span><br><span class="line">  --hostname QL \</span><br><span class="line">  --restart always \</span><br><span class="line">  -p 5700:5700 \</span><br><span class="line">  -v $PWD/QL/config:/ql/config \</span><br><span class="line">  -v $PWD/QL/log:/ql/log \</span><br><span class="line">  -v $PWD/QL/db:/ql/db \</span><br><span class="line">  -v $PWD/QL/scripts:/ql/scripts \</span><br><span class="line">  -v $PWD/QL/jbot:/ql/jbot \</span><br><span class="line">  whyour/qinglong:latest</span><br></pre></td></tr></table></figure>
+
+<h3 id="MacVlan方式"><a href="#MacVlan方式" class="headerlink" title="MacVlan方式"></a>MacVlan方式</h3><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span> -dit \</span><br><span class="line">  --name QL \</span><br><span class="line">  --hostname QL \</span><br><span class="line">  --restart always \</span><br><span class="line">  --net=macnet \</span><br><span class="line">  --ip=192.168.2.20 \</span><br><span class="line">  --dns=192.168.2.2 \</span><br><span class="line">  --mac-address C2:F2:9C:C5:B1:01 \</span><br><span class="line">  -v $PWD/QL/config:/ql/config \</span><br><span class="line">  -v $PWD/QL/log:/ql/log \</span><br><span class="line">  -v $PWD/QL/db:/ql/db \</span><br><span class="line">  -v $PWD/QL/scripts:/ql/scripts \</span><br><span class="line">  -v $PWD/QL/jbot:/ql/jbot \</span><br><span class="line">  whyour/qinglong:latest</span><br></pre></td></tr></table></figure>
+
 
           
         
@@ -1754,6 +1749,7 @@
 
 
   
+
 
 
 

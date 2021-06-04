@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="简介青龙采用全新的设计方式，颜值即正义的设计理念为大家带来更加个性化和人性化的交互方式。截止到当前博客创建时间，青龙即将迎来2.0，如果大家有什么好的建议，请前往 👉 反馈地址 提交您的宝贵意见，感谢大家一直以来对whyour大佬 的支持 ^_^ ☕鼓励一下☕ 环境 Docker 代理 (尽量满足)  部署Host方式docker run -dit \     --name QL \     -">
+<meta name="description" content="简介青龙采用全新的设计方式，颜值即正义的设计理念为大家带来更加个性化和人性化的交互方式。截止到当前博客创建时间，青龙即将迎来2.0，如果大家有什么好的建议，请前往 👉 反馈地址 提交您的宝贵意见，感谢大家一直以来对whyour大佬 的支持 ^_^ ☕鼓励一下☕ 环境 Docker 代理 (尽量满足)  部署Host方式1234567891011docker run -dit \  --name">
 <meta name="keywords" content="Docker,折腾,qinglong,whyour">
 <meta property="og:type" content="article">
 <meta property="og:title" content="青龙 安装教程">
 <meta property="og:url" content="https://mopo-blog.ddnsfree.com/2021/05/08/qinglong-docker-build/index.html">
 <meta property="og:site_name" content="爱折腾的小白 - MoPoQAQ">
-<meta property="og:description" content="简介青龙采用全新的设计方式，颜值即正义的设计理念为大家带来更加个性化和人性化的交互方式。截止到当前博客创建时间，青龙即将迎来2.0，如果大家有什么好的建议，请前往 👉 反馈地址 提交您的宝贵意见，感谢大家一直以来对whyour大佬 的支持 ^_^ ☕鼓励一下☕ 环境 Docker 代理 (尽量满足)  部署Host方式docker run -dit \     --name QL \     -">
+<meta property="og:description" content="简介青龙采用全新的设计方式，颜值即正义的设计理念为大家带来更加个性化和人性化的交互方式。截止到当前博客创建时间，青龙即将迎来2.0，如果大家有什么好的建议，请前往 👉 反馈地址 提交您的宝贵意见，感谢大家一直以来对whyour大佬 的支持 ^_^ ☕鼓励一下☕ 环境 Docker 代理 (尽量满足)  部署Host方式1234567891011docker run -dit \  --name">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-05-15T15:06:07.328Z">
+<meta property="og:updated_time" content="2021-05-18T02:47:58.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="青龙 安装教程">
-<meta name="twitter:description" content="简介青龙采用全新的设计方式，颜值即正义的设计理念为大家带来更加个性化和人性化的交互方式。截止到当前博客创建时间，青龙即将迎来2.0，如果大家有什么好的建议，请前往 👉 反馈地址 提交您的宝贵意见，感谢大家一直以来对whyour大佬 的支持 ^_^ ☕鼓励一下☕ 环境 Docker 代理 (尽量满足)  部署Host方式docker run -dit \     --name QL \     -">
+<meta name="twitter:description" content="简介青龙采用全新的设计方式，颜值即正义的设计理念为大家带来更加个性化和人性化的交互方式。截止到当前博客创建时间，青龙即将迎来2.0，如果大家有什么好的建议，请前往 👉 反馈地址 提交您的宝贵意见，感谢大家一直以来对whyour大佬 的支持 ^_^ ☕鼓励一下☕ 环境 Docker 代理 (尽量满足)  部署Host方式1234567891011docker run -dit \  --name">
 
 
 
@@ -205,7 +205,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags  //标签"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags   //标签"></i> <br>
             
             标签
           </a>
@@ -235,9 +235,19 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user    //关于"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user   //关于"></i> <br>
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-cloud">
+          <a href="http://mopo-cloud.ddnsfree.com/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cloud  //网盘"></i> <br>
+            
+            cloud
           </a>
         </li>
       
@@ -245,7 +255,7 @@
         <li class="menu-item menu-item-links">
           <a href="/links/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-leaf  //友链"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-leaf   //友链"></i> <br>
             
             友链
           </a>
@@ -423,31 +433,10 @@
 <li>Docker</li>
 <li>代理 (尽量满足)</li>
 </ul>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="Host方式"><a href="#Host方式" class="headerlink" title="Host方式"></a>Host方式</h3><p><code>docker run -dit \
-    --name QL \
-    --hostname QL \
-    --restart always \
-    -p 5700:5700 \
-    -v $PWD/QL/config:/ql/config \
-    -v $PWD/QL/log:/ql/log \
-    -v $PWD/QL/db:/ql/db \
-    -v $PWD/QL/scripts:/ql/scritps \
-    -v $PWD/QL/jbot:/ql/jbot \
-    whyour/qinglong:latest</code></p>
-<h3 id="MacVlan方式"><a href="#MacVlan方式" class="headerlink" title="MacVlan方式"></a>MacVlan方式</h3><p><code>docker run -dit \
-    --name QL \
-    --hostname QL \
-    --restart always \
-    --net=macnet \
-    --ip=192.168.2.20 \
-    --dns=192.168.2.2 \
-    --mac-address C2:F2:9C:C5:B1:01 \
-    -v $PWD/QL/config:/ql/config \
-    -v $PWD/QL/log:/ql/log \
-    -v $PWD/QL/db:/ql/db \
-    -v $PWD/QL/scripts:/ql/scritps \
-    -v $PWD/QL/jbot:/ql/jbot \
-    whyour/qinglong:latest</code></p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="Host方式"><a href="#Host方式" class="headerlink" title="Host方式"></a>Host方式</h3><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span> -dit \</span><br><span class="line">  --name QL \</span><br><span class="line">  --hostname QL \</span><br><span class="line">  --restart always \</span><br><span class="line">  -p 5700:5700 \</span><br><span class="line">  -v $PWD/QL/config:/ql/config \</span><br><span class="line">  -v $PWD/QL/log:/ql/log \</span><br><span class="line">  -v $PWD/QL/db:/ql/db \</span><br><span class="line">  -v $PWD/QL/scripts:/ql/scripts \</span><br><span class="line">  -v $PWD/QL/jbot:/ql/jbot \</span><br><span class="line">  whyour/qinglong:latest</span><br></pre></td></tr></table></figure>
+
+<h3 id="MacVlan方式"><a href="#MacVlan方式" class="headerlink" title="MacVlan方式"></a>MacVlan方式</h3><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span> -dit \</span><br><span class="line">  --name QL \</span><br><span class="line">  --hostname QL \</span><br><span class="line">  --restart always \</span><br><span class="line">  --net=macnet \</span><br><span class="line">  --ip=192.168.2.20 \</span><br><span class="line">  --dns=192.168.2.2 \</span><br><span class="line">  --mac-address C2:F2:9C:C5:B1:01 \</span><br><span class="line">  -v $PWD/QL/config:/ql/config \</span><br><span class="line">  -v $PWD/QL/log:/ql/log \</span><br><span class="line">  -v $PWD/QL/db:/ql/db \</span><br><span class="line">  -v $PWD/QL/scripts:/ql/scripts \</span><br><span class="line">  -v $PWD/QL/jbot:/ql/jbot \</span><br><span class="line">  whyour/qinglong:latest</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -457,6 +446,30 @@
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢大家一直以来的支持，我会继续努力💪</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="MoPo QAQ 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -527,6 +540,10 @@
 
   
 
+  
+ 	  <div id="gitalk-container"></div>
+  
+  
 
 
         </div>
@@ -846,6 +863,24 @@
 
 
 
+
+
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+	<script type="text/javascript">
+    		var gitalk = new Gitalk({
+		        clientID: 'df4eabc329e4a96d595e',
+		        clientSecret: '233cd5a956354f0ccc063298f335bd12e0ef9181',
+		        id: md5(location.pathname),
+		        repo: 'MoPoQAQ.github.io',
+		        owner: 'MoPoQAQ',
+		        admin: 'MoPoQAQ',
+			distractionFreeMode: '',
+
+		    });
+	    gitalk.render('gitalk-container');
+	</script>
 
 
   

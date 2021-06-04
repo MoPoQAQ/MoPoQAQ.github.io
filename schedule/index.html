@@ -204,7 +204,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags  //标签"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags   //标签"></i> <br>
             
             标签
           </a>
@@ -234,9 +234,19 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user    //关于"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user   //关于"></i> <br>
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-cloud">
+          <a href="http://mopo-cloud.ddnsfree.com/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cloud  //网盘"></i> <br>
+            
+            cloud
           </a>
         </li>
       
@@ -244,7 +254,7 @@
         <li class="menu-item menu-item-links">
           <a href="/links/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-leaf  //友链"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-leaf   //友链"></i> <br>
             
             友链
           </a>
@@ -341,6 +351,10 @@
 
   
 
+  
+ 	  <div id="gitalk-container"></div>
+  
+  
 
 
         </div>
@@ -635,6 +649,24 @@
 
 
 
+
+
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+	<script type="text/javascript">
+    		var gitalk = new Gitalk({
+		        clientID: 'df4eabc329e4a96d595e',
+		        clientSecret: '233cd5a956354f0ccc063298f335bd12e0ef9181',
+		        id: md5(location.pathname),
+		        repo: 'MoPoQAQ.github.io',
+		        owner: 'MoPoQAQ',
+		        admin: 'MoPoQAQ',
+			distractionFreeMode: '',
+
+		    });
+	    gitalk.render('gitalk-container');
+	</script>
 
 
   
